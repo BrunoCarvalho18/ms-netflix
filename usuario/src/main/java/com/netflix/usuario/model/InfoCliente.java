@@ -16,11 +16,18 @@ public class InfoCliente {
 	private String estado;
 	private String endereco;
 
+	public InfoCliente(InfoCliente infoCliente) {
+		this.cpf = infoCliente.getCpf();
+		this.nome = infoCliente.getNome();
+		this.estado = infoCliente.getEstado();
+		this.endereco = infoCliente.getEndereco();
+	}
+
 	public InfoCliente() {
 
 	}
 
-	public InfoCliente(String nome, String estado, String endereco) {
+	public InfoCliente(String cpf,String nome, String estado, String endereco) {
 		this.nome = nome;
 		this.estado = estado;
 		this.endereco = endereco;

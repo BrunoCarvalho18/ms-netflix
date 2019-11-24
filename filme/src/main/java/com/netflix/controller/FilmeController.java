@@ -1,0 +1,26 @@
+package com.netflix.controller;
+
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+import com.netflix.filme.producer.FilmeProducer;
+import lombok.extern.slf4j.Slf4j;
+
+@RestController
+@RequestMapping(value = "/ordemfilme")
+@Slf4j
+public class FilmeController {
+
+	private final FilmeProducer filmeProducer;
+
+	private FilmeController(FilmeProducer filmeProducer) {
+		this.filmeProducer = filmeProducer;
+	}
+
+	@RequestMapping(method = RequestMethod.POST)
+	public void send(@RequestBody String ordemFilme) {
+		filmeProducer.enviar(ordemFilme);
+	}
+
+}

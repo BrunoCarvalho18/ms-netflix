@@ -1,18 +1,5 @@
 server:
   port: 8081
-    
-spring:
-  application:
-    name: 'cliente'
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    password: admin
-    url: jdbc:mysql://localhost:3308/usuarios?useTimezone=true&serverTimezone=UTC
-    username: root
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
 
 eureka:
   client:
