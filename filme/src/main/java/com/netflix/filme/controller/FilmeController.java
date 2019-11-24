@@ -1,5 +1,6 @@
 package com.netflix.filme.controller;
 
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -23,6 +24,7 @@ public class FilmeController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
+	@CacheEvict
 	public void send(@RequestBody String ordemFilme) {
 		filmeProducer.enviar(ordemFilme);
 		logger.info("Mensagem do filme postada !");
