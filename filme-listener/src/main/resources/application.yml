@@ -1,0 +1,12 @@
+server:
+  port: 8084
+
+filme:
+  topico: filmetopico
+  
+spring:
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      bootstrap-servers: http://localhost:9092
+      group-id: group-id
