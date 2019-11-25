@@ -2,6 +2,8 @@ package com.netflix.usuario.controller;
 
 import java.util.Optional;
 import javax.validation.Valid;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -39,7 +41,7 @@ public class InfoUsuarioController {
 		return ResponseEntity.notFound().build();
 
 	}
-	
+
 	@PutMapping("/{id}")
 	@ResponseBody
 	public ResponseEntity<InfoCliente> alterar(@PathVariable Long id, @Valid @RequestBody InfoCliente cliente) {
@@ -51,7 +53,7 @@ public class InfoUsuarioController {
 		return ResponseEntity.ok(infoNomeRepository.save(cliente));
 
 	}
-	
+
 	@DeleteMapping("/{id}")
 	@ResponseBody
 	public ResponseEntity<?> deletar(@PathVariable Long id) {
@@ -72,6 +74,7 @@ public class InfoUsuarioController {
 			BindingResult bindingResult) {
 		infoNomeRepository.save(cliente);
 		return new ResponseEntity<InfoCliente>(HttpStatus.CREATED);
+
 	}
 
 	@GetMapping("/")
