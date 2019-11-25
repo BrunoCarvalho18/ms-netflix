@@ -9,7 +9,7 @@ zuul:
   routes:
     index:
       sensitiveHeaders:
-      path: /cadastro/**
+      path: api/v1/cadastro/**
       url: http://127.0.0.1:8081/
     bridgekc:
       sensitiveHeaders:
