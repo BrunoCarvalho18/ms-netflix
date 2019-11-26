@@ -1,5 +1,7 @@
 package com.netflix.filme.controller;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,6 +19,11 @@ public class FilmeController {
 	private final FilmeProducer filmeProducer;
 	
 	private static final Logger logger = LogManager.getLogger(FilmeController.class);
+	
+	@GetMapping("/assistir/{idFilme}/{idUsuario}")
+	public void assistirFilme (@PathVariable Long idFilme, @PathVariable Long idUsuario) {
+		send("Filme "+idFilme+" assistido pelo usuario "+idUsuario);
+	}
 
 	private FilmeController(FilmeProducer filmeProducer) {
 		this.filmeProducer = filmeProducer;
