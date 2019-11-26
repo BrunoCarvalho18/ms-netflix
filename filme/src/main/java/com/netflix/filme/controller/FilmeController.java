@@ -1,7 +1,7 @@
 package com.netflix.filme.controller;
 
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -10,11 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import com.netflix.filme.producer.FilmeProducer;
-import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping(value = "/ordemfilme")
-@Slf4j
 public class FilmeController {
 
 	private final FilmeProducer filmeProducer;
@@ -47,4 +45,3 @@ public class FilmeController {
 	}
 
 }
->>>>>>> branch 'master' of https://github.com/BrunoCarvalho18/ms-netflix.git
