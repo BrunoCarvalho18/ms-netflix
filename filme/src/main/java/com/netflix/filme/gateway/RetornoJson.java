@@ -1,4 +1,4 @@
-package com.netflix.gateway;
+package com.netflix.filme.gateway;
 
 public class RetornoJson {
 	

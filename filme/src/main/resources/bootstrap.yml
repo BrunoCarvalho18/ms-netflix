@@ -1,2 +1,9 @@
 spring:
+  application:
    name: filme
+  profiles:
+     active: default
+  cloud:
+    config:
+     uri: http://localhost:8888
+     name: filme   

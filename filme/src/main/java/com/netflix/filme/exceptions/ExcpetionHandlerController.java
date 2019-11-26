@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.netflix.gateway.RetornoJson;
+import com.netflix.filme.gateway.RetornoJson;
 
 @ControllerAdvice
 public class ExcpetionHandlerController {
