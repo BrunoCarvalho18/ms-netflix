@@ -15,7 +15,6 @@ import org.apache.logging.log4j.Logger;
 public class FilmeController {
 
 	private final FilmeProducer filmeProducer;
-	
 	private static final Logger logger = LogManager.getLogger(FilmeController.class);
 
 	private FilmeController(FilmeProducer filmeProducer) {
