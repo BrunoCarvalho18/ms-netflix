@@ -9,7 +9,11 @@ zuul:
   routes:
     index:
       sensitiveHeaders:
+<<<<<<< HEAD
+      path: /cadastro/**
+=======
       path: api/v1/cadastro/**
+>>>>>>> branch 'master' of https://github.com/BrunoCarvalho18/ms-netflix.git
       url: http://127.0.0.1:8081/
     bridgekc:
       sensitiveHeaders:

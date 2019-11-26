@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 server:
   port: 8084
 
@@ -10,3 +11,24 @@ spring:
       auto-offset-reset: earliest
       bootstrap-servers: http://localhost:9092
       group-id: group-id
+=======
+server:
+  port: 8084
+
+filme:
+  topico: filmetopico
+  
+spring:
+  kafka:
+    consumer:
+      auto-offset-reset: earliest
+      bootstrap-servers: http://localhost:9092
+      group-id: group-id
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka       
+>>>>>>> branch 'master' of https://github.com/BrunoCarvalho18/ms-netflix.git
