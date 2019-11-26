@@ -1,4 +1,4 @@
-package com.netflix.model;
+package com.netflix.modelo;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
