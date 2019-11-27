@@ -10,4 +10,6 @@ spring:
       auto-offset-reset: earliest
       bootstrap-servers: http://localhost:9092
       group-id: group-id
+  sleuth:
+    sampler:      probability: 1.0    
 
